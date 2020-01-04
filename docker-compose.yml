@@ -45,6 +45,11 @@ services:
       - /app/node_modules
       - ./worker:/app
     environment:
-      - REDIS_HOST=redis
+      - REDIS_HOST=multi-docker-redis.mjpkxv.0001.use2.cache.amazonaws.com
       - REDIS_PORT=6379
+      - PGUSER=postgres
+      - PGPASSWORD=postgres8864
+      - PGHOST=fibvalue.cu3zubnpfw10.us-east-2.rds.amazonaws.com
+      - PGDATABASE=fibvalue
+      - PGPORT=5432
 
