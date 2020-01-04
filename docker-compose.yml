@@ -23,12 +23,12 @@ services:
       - /app/node_modules
       - ./server:/app
     environment:
-      - REDIS_HOST=redis
+      - REDIS_HOST=multi-docker-redis.mjpkxv.0001.use2.cache.amazonaws.com
       - REDIS_PORT=6379
       - PGUSER=postgres
-      - PGHOST=postgres
-      - PGDATABASE=postgres
-      - PGPASSWORD=postgres_password
+      - PGHOST=fibvalue.cu3zubnpfw10.us-east-2.rds.amazonaws.com
+      - PGDATABASE=fibvalue
+      - PGPASSWORD=postgres8864
       - PGPORT=5432
   client:
     build:
@@ -44,12 +44,5 @@ services:
     volumes:
       - /app/node_modules
       - ./worker:/app
-    environment:
-      - REDIS_HOST=multi-docker-redis.mjpkxv.0001.use2.cache.amazonaws.com
-      - REDIS_PORT=6379
-      - PGUSER=postgres
-      - PGPASSWORD=postgres8864
-      - PGHOST=fibvalue.cu3zubnpfw10.us-east-2.rds.amazonaws.com
-      - PGDATABASE=fibvalue
-      - PGPORT=5432
+    
 
